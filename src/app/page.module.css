@@ -1,0 +1,24 @@
+.rowContainer {
+    display: flex; /* Use flexbox to align items in a row */
+    flex-wrap: nowrap;
+}
+
+.hex {
+    /* Add any styles you need for each hex item */
+    padding: 5px; /* Example padding */
+    width: 100px;
+    height: 100px;
+    display: flex; /* Center text inside the hexagon */
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    border: 1px solid black;
+    clip-path: polygon(
+        50% 0%,
+        /* Top center */ 100% 25%,
+        /* Top-right corner */ 100% 75%,
+        /* Bottom-right corner */ 50% 100%,
+        /* Bottom center */ 0% 75%,
+        /* Bottom-left corner */ 0% 25% /* Top-left corner */
+    );
+}
